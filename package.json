@@ -5,9 +5,11 @@
     "main": "index.js",
     "scripts": {
         "build": "npx tsc",
-        "watch": "npx tsc -w",
+        "run": "npx tsc & npm run test",
         "test": "node ./build/main",
-        "run": "npx tsc & npm run test"
+
+        "watch:script": "npx tsc -w",
+        "watch:server": "nodemon --watch build --exec \"npm run test\"",
     },
     "author": "",
     "license": "ISC",
